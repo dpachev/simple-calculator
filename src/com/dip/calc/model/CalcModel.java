@@ -1,4 +1,4 @@
-package com.dip.model;
+package com.dip.calc.model;
 
 public class CalcModel {
 
