@@ -38,6 +38,7 @@ public class CalcView {
 	private JButton buttonPlus;
 	private JButton buttonMinus;
 	private JButton buttonEquals;
+	private JButton buttonDel;
 	
 	
 	public CalcView() {
@@ -74,6 +75,7 @@ public class CalcView {
 		buttonPlus = new JButton("+");
 		buttonMinus = new JButton("-");
 		buttonEquals= new JButton("=");
+		buttonDel = new JButton("C");
 		
 		inputButtonsPanel.setLayout(new GridLayout(4, 3));
 		inputButtonsPanel.add(button7);
@@ -85,7 +87,7 @@ public class CalcView {
 		inputButtonsPanel.add(button1);
 		inputButtonsPanel.add(button2);
 		inputButtonsPanel.add(button3);
-		inputButtonsPanel.add(new JButton(""));
+		inputButtonsPanel.add(buttonDel);
 		inputButtonsPanel.add(button0);
 		inputButtonsPanel.add(buttonDot);
 		
@@ -164,6 +166,10 @@ public class CalcView {
 	
 	public void addButtonEqualsListener(ActionListener actionListener) {
 		buttonEquals.addActionListener(actionListener);
+	}
+	
+	public void addButtonDelListener(ActionListener actionListener) {
+		buttonDel.addActionListener(actionListener);
 	}
 	
 	public void addDigitToValue(int digit) {

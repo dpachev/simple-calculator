@@ -28,6 +28,7 @@ public class CalcController {
 		this.calcView.addButtonDotListener(new ButtonDotListener());
 		this.calcView.addButtonPlusListener(new ButtonPlusListener());
 		this.calcView.addButtonMinusListener(new ButtonMinusListener());
+		this.calcView.addButtonDelListener(new ButtonDelListener());
 		this.calcView.addButtonEqualsListener(new ButtonEqualsListener());
 	}
 	
@@ -123,6 +124,13 @@ public class CalcController {
 	}
 	
 	class ButtonEqualsListener implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+	}
+	
+	class ButtonDelListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
