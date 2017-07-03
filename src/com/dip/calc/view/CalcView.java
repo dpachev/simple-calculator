@@ -22,6 +22,7 @@ public class CalcView {
 	private JPanel inputPanel;
 	private JPanel inputButtonsPanel;
 	private JPanel operatorsPanel;
+	private JLabel resultTextField;
 	
 	private JButton button0;
 	private JButton button1;
@@ -50,7 +51,7 @@ public class CalcView {
 		
 		// Result Panel
 		resultPanel = new JPanel();
-		JLabel resultTextField = new JLabel("0");
+		resultTextField = new JLabel("0");
 		resultPanel.add(resultTextField);
 		
 		// Input Panel
@@ -163,6 +164,22 @@ public class CalcView {
 	
 	public void addButtonEqualsListener(ActionListener actionListener) {
 		buttonEquals.addActionListener(actionListener);
+	}
+	
+	public void addDigitToValue(int digit) {
+		resultTextField.setText(resultTextField.getText() + Integer.toString(digit));
+	}
+	
+	public void setValue(String value) {
+		resultTextField.setText(value);
+	}
+	
+	public String getValue() {
+		return resultTextField.getText();
+	}
+	
+	public void clearScreen() {
+		resultTextField.setText("0");
 	}
 	
 }
